@@ -18,13 +18,13 @@ int main()
 		if (std::cin.peek() == '\n')
 			break;
 	}
-	for(int temp:vec)
+	for(const int & temp:vec)
 		std::cout << temp;
 	std::cout << std::endl;
-	
+
 	fill_n(vec.begin(), vec.size(), 0);
 
-	for(int temp:vec)
+	for(const int & temp:vec)
 		std::cout << temp;
 	std::cout << std::endl;
 	return 0;

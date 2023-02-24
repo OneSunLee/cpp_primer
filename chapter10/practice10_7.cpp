@@ -39,7 +39,8 @@ int test1()
 	int i;
 	// while (cin >> i)
 	// 	lst.push_back(i);
-	while (cin >> *(lst.emplace(lst.end())));//没有move操作，更快
+	while (cin >> *(lst.emplace(lst.end())));//没有move操作，更快，control+D结束
+	words.erase(words.end()-1);//会多构造了一个
 	copy(lst.cbegin(), lst.cend(), back_inserter(vec));
 	for (int i : vec)
 		std::cout << i;
@@ -60,7 +61,7 @@ int test2()
 	// fill_n(vec.begin(), 10, 0);
 
 	//显示
-	for (int i : vec)
+	for (const int & i : vec)
 		std::cout << i;
 	std::cout << endl;
 	return 0;
