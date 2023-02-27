@@ -1,5 +1,5 @@
 /*
-第23题
+第23题加
 */
 #include <iostream>
 
